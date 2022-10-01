@@ -41,3 +41,29 @@
 #searchFriend{
     color: aliceblue;
 }
+
+body{
+    background-image:url("images/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parentDiv{
+    
+    padding-left:20%;
+    padding-right:20%;  
+    padding-top: 8%;
+}
+
+.tweetBox{
+    background-color: azure;
+    height:40px;
+    width:100%;
+    height:90px;
+}
+
+.forMenu button{
+    border: none;
+    outline: none;
+    background: none;
+}
