@@ -7,6 +7,7 @@ body{
     background-image:url("images/background.png");
     background-repeat: no-repeat;
     background-size: cover;
+    overflow: hidden;
 }
 
 .box{
@@ -21,8 +22,29 @@ body{
 
 input{
     display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.buttons{
+    width: 25%;
+    border-radius: 12px;
+    background-image: url(images/background.png);
+    border-width: thin;
+    border-style: inherit;
+    color: aqua;
+    padding: 4px;
+    margin: auto;
+    margin-bottom: 8px;
 }
 
 .boxElements{
     margin-bottom: 8px;
+}
+
+.buttons:hover{
+    background-color: cyan;
+    background-image: none;
+    color: blueviolet;
+    border-style:double;
 }
