@@ -3,12 +3,15 @@ document.getElementById("loginBtn").onclick = function(){
     let password =  document.getElementById("pass").value;
     if(personName.length == 0) {
         alert("Please Enter Name");
-        document.getElementById("name").focus()
+        document.getElementById("name").focus();
+        return;
     }
     if(password.length == 0) {
         alert("Please Enter Password");
-        document.getElementById("pass").focus()
+        document.getElementById("pass").focus();
+        return;
     }
+
     fetch('http://localhost:8082/api/v1/tweets/login',{
         method: 'POST',
         headers: {'Accept': 'application/json',
@@ -34,3 +37,4 @@ document.getElementById("loginBtn").onclick = function(){
 document.getElementById("signUpBtn").onclick = function(){
     window.location.href = "http://127.0.0.1:5500/SignUpPage.html";
 }
+
