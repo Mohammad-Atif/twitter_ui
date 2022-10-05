@@ -1,15 +1,32 @@
 document.getElementById("loginBtn").onclick = function(){
-    fetch('http://localhost:8082/api/v1/tweets/register',{
+    let personName = document.getElementById("name").value;
+    let password =  document.getElementById("pass").value;
+    if(personName.length == 0) {
+        alert("Please Enter Name");
+        document.getElementById("name").focus()
+    }
+    if(password.length == 0) {
+        alert("Please Enter Password");
+        document.getElementById("pass").focus()
+    }
+    fetch('http://localhost:8082/api/v1/tweets/login',{
         method: 'POST',
         headers: {'Accept': 'application/json',
         'Content-Type': 'application/json'},
         body: JSON.stringify({
-            "name": "Atif5",
-            "password": "1234Ati"
+            "name": personName,
+            "password": password
         })
     })
     .then(data => {
         return data.json()
     })
-    .then(data => console.log(data))
+    .then(data =>{
+        if(data["name"] != null) {
+            window.location.href = "http://127.0.0.1:5500/HomePage.html";
+        }
+        else {
+            alert("Authentication Failed , Please Sign Up");
+        }
+    } )
 }

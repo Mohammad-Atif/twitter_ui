@@ -16,7 +16,7 @@ body{
     width: 30%;
     padding: 14px;
     margin: auto;
-    margin-top: 20%;
+    margin-top: 18%;
     
 }
 
@@ -40,6 +40,7 @@ input{
 
 .boxElements{
     margin-bottom: 8px;
+    text-align: center;
 }
 
 .buttons:hover{
