@@ -26,6 +26,7 @@ document.getElementById("loginBtn").onclick = function(){
     })
     .then(data =>{
         if(data["name"] != null) {
+            sessionStorage.name = personName;
             window.location.href = "http://127.0.0.1:5500/HomePage.html";
         }
         else {
