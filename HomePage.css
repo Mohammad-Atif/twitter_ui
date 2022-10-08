@@ -50,19 +50,45 @@ body{
 }
 
 .parentDiv{
-    padding-left:20%;
-    padding-right:20%;  
-    padding-top: 8%;
+    padding-left:5%;
+    padding-right:5%;  
+    padding-top: 5%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-auto-rows: minmax(200px, auto);
+    gap: 10px;
+    /* grid-template-areas: "Main-Content SideBar"; */
 }
 
 .tweetBox{
-    background-color: azure;
+    background-color:khaki;
     height:40px;
-    width:100%;
-    height:90px;
+    margin-bottom: 18px;
+    /* height:90px; */
     border-radius: 12px;
     padding: 10px;
     display: flex;
+    align-items: center;
+    justify-content:space-around;
+
+}
+
+#tweetBtn {
+    background-color: #6FAAF7;
+    border-style: ridge;
+    border-color: darkcyan;
+    border-width: thin;
+    border-radius: 8px;
+    margin-left: 8px;
+    color: #fff;
+    height: 30px;
+    flex: 1;
+    
+}
+
+#tweetBtn:hover {
+    background-color: #fff;
+    color: #6FAAF7;
 }
 
 .forMenu button{
@@ -72,13 +98,11 @@ body{
 }
 
 #tweetText{
-    margin: auto;
-    justify-content: center;
-    align-items: center;
+   flex: 8;
 }
 
 textarea{
-    width: 90%;
+    /* width: 90%; */
     resize: none;
 }
 
@@ -90,4 +114,22 @@ textarea{
 #tweetText:focus {
     outline: none;
     box-shadow: 0;
+}
+
+.mainColumn {
+    background-color: azure;
+    /* padding: 8px; */
+    /* grid-area: "Main-Content"; */
+}
+
+.sideBar{
+    background-color: burlywood;
+    /* grid-area: "SideBar"; */
+}
+
+.allTweets{
+    min-height: 100px;
+    background-color: khaki;
+    border-radius: 12px;
+    padding: 10px;
 }
